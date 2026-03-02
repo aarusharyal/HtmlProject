@@ -33,16 +33,6 @@
     text-align: center;
     margin-bottom: 20px;
 }
-.h1
-{
-    font-size: 36px;
-    color: #333;
-}
-.p
-{
-    font-size: 18px;
-    color: #666;
-}
 .features
 {
     display: flex;
@@ -57,14 +47,26 @@
     width: 200px;
     text-align: center;
 }
-.feature h2
+.grid-container
 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 400px);
+    gap: 10px;
+    width: 10000px;
+    margin: 50px auto;
 }
-.feature p
+.grid-container :hover
 {
-    font-size: 16px;
-    color: #666;
+    background-color: red;
+}
+.item{
+    background-color: #4286f5;
+    border: 1px solid #000;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
 }
