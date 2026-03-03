@@ -4,22 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Added the title for the Page -->
     <title>Homepage</title>
+
+    <!-- Linking all the necessary libraries and pages  -->
     <link rel="stylesheet" href="Css\style_home.css">
     <!-- <link rel="stylesheet" href="Javascript/script_home.js"> -->
+
+    <!-- Linking fontawesome for adding icons and logos to the Page -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Adding the required fonts i plan on using on the project -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Betania+Patmos&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
+    <!-- Adding a icon for the Page -->
     <link rel="icon" type="image/x-icon"
         href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Teacup_clipart.svg/640px-Teacup_clipart.svg.png">
 </head>
 
+<!-- Starting of the Body of the Page.  -->
+
 <body>
-    <script src="Javascript/script_home.js"></script>
+
+
+    <!-- Creating the Navbar -->
     <nav>
+        <!-- Selecting a logo for the Navbar and adding the necessary links to the Page. -->
         <div class="navbar">
             <i class="fa-solid fa-star-of-david"></i>
             <a href="#">Home</a>
@@ -27,63 +41,59 @@
             <a href="#">Contact</a>
         </div>
     </nav>
+    <!-- Starting of the main content section -->
     <main>
+        <!-- Dividing the main into multiple sections -->
         <section class="Welcome">
-            <h1 class="h1">Welcome to Our College</h1>
-            <p class="p">Achieve excellence in education and innovation</p>
+            <h1 class="welcome_h1">Welcome to Our College</h1>
+            <p class="welcome_p">Achieve excellence in education and innovation</p>
             <button class="cta-btn">Learn More</button>
         </section>
         <section class="gallery">
             <h2>Campus Gallery</h2>
             <div class="gallery-container">
-                <div class="slideshow-wrapper">
-                    <div class="style_fade">
-                        <img src="images/campus_building.avif" alt="Campus Building">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="images/campus_building.avif" style="width:100%" alt="Campus Building">
                         <div class="text">Campus Building</div>
                     </div>
-                    <div class="style_fade">
-                        <img src="images/library.avif" alt="Library">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="images/library.avif" style="width:100%" alt="Library">
                         <div class="text">Library</div>
                     </div>
-                    <div class="style_fade">
-                        <img src="images/student_area.avif" alt="Student Area">
-                        <div class="text">Student Area</div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="images/student_center.avif" style="width:100%" alt="Student Center">
+                        <div class="text">Student Center</div>
                     </div>
-                    <div class="style_fade">
-                        <img src="images/sports_facility.avif" alt="Sports Facility">
-                        <div class="text">Sports Facility</div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 3</div>
+                        <img src="images/lab.avif" style="width:100%" alt="Lab">
+                        <div class="text">Lab</div>
                     </div>
-                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
                 </div>
             </div>
-
-            <!-- 
-
-            <script>
-                let slideIndex = 1;
-                showSlide(slideIndex);
-                function changeSlide(n) {
-                    showSlide(slideIndex += n);
-                }
-
-                function showSlide(n) {
-                    let slides = document.getElementsByClassName("slide");
-                    if (n > slides.length) {
-                        slideIndex = 1
-                    }
-                    if (n < 1) {
-                        slideIndex = slides.length
-                    }
-                    for (let i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    slides[slideIndex - 1].style.display = "block";
-                }
-            </script>
- -->
-
-
         </section>
 
         <section class="features">
@@ -154,6 +164,11 @@
             </div>
         </section>
     </main>
+
+
+
+    <!-- Linking the source for the required JavaScript -->
+    <script src="Javascript/script_home.js"></script>
 </body>
 
 </html>
